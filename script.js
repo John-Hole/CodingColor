@@ -7,7 +7,6 @@ let colori = [];
 
 function elabora(){
     let numero = Number(document.getElementById("inNumber").value);
-    alert(numero);
 
     let testo = document.getElementById("inText").value;
     document.getElementById("outText2").innerHTML = testo;
@@ -27,7 +26,7 @@ function elabora(){
 
         if(colori.length == 3){
             let newColor = `rgb(${colori[0]}, ${colori[1]}, ${colori[2]})`;
-            document.getElementById("outText2").style.color = newColor;
+            document.getElementById("error").style.color = newColor;
         }
 
     } else {
@@ -43,9 +42,9 @@ function reset(){
     document.getElementById("inText").value = "";
 
     // svuota output
-    document.getElementById("outText").innerHTML = "";
-    document.getElementById("outText2").innerHTML = "";
-    document.getElementById("error").innerHTML = "";
+    document.getElementById("outText").innerHTML = "Output";
+    document.getElementById("outText2").innerHTML = "Output2";
+    document.getElementById("error").innerHTML = "Error";
 
     // ripristina colore testo
     document.getElementById("outText2").style.color = "black";
