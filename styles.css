@@ -7,51 +7,163 @@
 
 body {
     background: linear-gradient(135deg, #fdf2f8, #eef2ff);
-    color: #000000;
+    color: #1f2937;
     min-height: 100vh;
-}
-
-footer {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
-#error {
-    color: #ff0000;
+.scheda-principale {
+    background: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
 }
 
-#outText {
-    color: #0000ff;
+.intestazione h1 {
+    font-size: 26px;
+    color: #111827;
+    margin-bottom: 4px;
 }
 
-button{
+#data-odierna {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+
+.gruppo-campo {
+    text-align: left;
+    margin-bottom: 14px;
+}
+
+.gruppo-campo label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #374151;
+}
+
+.gruppo-campo input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 12px;
+    border: 2px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.gruppo-campo input:focus {
+    border-color: #4CAF50;
+}
+
+.bottoni-azione {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+button {
+    flex: 1;
     cursor: pointer;
-    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 11px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+#btn-aggiungi {
     background-color: #4CAF50;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    border-radius: 10px;
 }
 
-button:hover{
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
+#btn-aggiungi:hover {
+    background-color: #43a047;
 }
 
+#btn-reset {
+    background-color: #f3f4f6;
+    color: #374151;
+    border-color: #d1d5db;
+}
 
-input{
-    font-family: Arial, sans-serif;
+#btn-reset:hover {
+    background-color: #e5e7eb;
+}
+
+.errore {
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 20px;
+    margin-top: 10px;
+}
+
+/* Badge dei 3 canali R, G, B */
+.stato-canali {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 18px 0;
+}
+
+.badge {
+    flex: 1;
+    padding: 8px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4b5563;
+    border: 1px solid #e5e7eb;
+}
+
+/* Rettangolo dove viene applicato il colore */
+.area-anteprima {
+    margin-top: 10px;
+}
+
+#riquadro-colore {
+    width: 100%;
+    height: 130px;
+    background-color: #e5e7eb;
+    border-radius: 12px;
+    border: 2px solid #d1d5db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.4s ease;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+#testo-dentro-riquadro {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #111827;
+}
+
+#codice-rgb-testo {
+    margin-top: 10px;
+    font-family: monospace;
     font-size: 16px;
-    padding: 5px;
-    margin: 5px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    font-weight: bold;
+    color: #374151;
+}
+
+footer {
+    margin-top: 24px;
+    font-size: 13px;
+    color: #9ca3af;
 }
