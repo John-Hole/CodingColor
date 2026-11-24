@@ -1,75 +1,11 @@
 console.log("Inizio esecuzione"); //Stampa messaggio nella console
-let d = new Date(); //Crea una variabile che contiene la data
-let g, m;
-switch (d.getDay()) {
-    case 1:
-        g = "Lunedì"
-        break;
-    case 2: 
-        g = "Martedì"
-        break;
-    case 3: 
-        g = "Mercoledì"
-        break;
-    case 4: 
-        g = "Giovedì"
-        break;
-    case 5: 
-        g = "Venerdì"
-        break;
-    case 6: 
-        g = "Sabato"
-        break;
-    case 0: 
-        g = "Domenica"
-        break;
-    default:
-        break;
-}
-switch (d.getMonth()) {
-    case 0:
-        m = "Gennaio"
-        break;
-    case 1:
-        m = "Febbraio"
-        break;
-    case 2: 
-        g = "Marzo"
-        break;
-    case 3: 
-        g = "Aprile"
-        break;
-    case 4: 
-        g = "Maggio"
-        break;
-    case 5: 
-        g = "Giugno"
-        break;
-    case 6: 
-        g = "Luglio"
-        break;
-    case 7: 
-        g = "Agosto"
-        break;
-    case 8:
-        m = "Settembre"
-        break;
-    case 9:
-        m = "Ottobre"
-        break;
-    case 10:
-        m = "Novembre"
-        break;
-    case 11:
-        m = "Dicembre"
-        break;
-    default:
-        break;
-}
-//Aggiunge all'elemento data-odierna solo il giorno di oggi
-console.log(g + ' ' + d.getDate() + ' ' + m + ' ' + d.getFullYear());
-document.getElementById("data-odierna").innerHTML = "Oggi è " + g + ' ' + d.getDate() + ' ' + m + ' ' + d.getFullYear(); 
-let colori = []; //Crea un array chiamato colori per salvare R, G e B
+let d = new Date(); //Crea una variabile che contiene e crea l'oggetto data
+let g = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica", ];
+let m = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+console.log(d.getDate() + '/' + d.getMonth() + '/' + d.getFullYear());
+console.log(g[d.getDay()-1] + ' ' + d.getDate() + ' ' + m[d.getMonth()] + ' ' + d.getFullYear());
+document.getElementById("data-odierna").innerHTML = "Oggi è " + g[d.getDay()-1] + ' ' + d.getDate() + ' ' + m[d.getMonth()] + ' ' + d.getFullYear(); 
+let colori = []; //Crea un array chiamato colori per salvare i valori R G B
 
 //Funzione elabora che viene richiamata dal bottone Aggiungi valore
 function elabora() {
