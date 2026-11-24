@@ -79,7 +79,9 @@ function reset() {
     //Ripristina il rettangolo grigio iniziale e i testi predefiniti
     document.getElementById("riquadro-colore").style.backgroundColor = "#e5e7eb";
     document.getElementById("testo-dentro-riquadro").innerHTML = "Anteprima";
+    document.getElementById("testo-dentro-riquadro").style.color = "#111827";
     document.getElementById("codice-rgb-testo").innerHTML = "rgb(?, ?, ?)";
+    document.getElementById("codice-rgb-testo").style.color = "#374151";
 
     //Svuota l'array colori
     colori = [];
