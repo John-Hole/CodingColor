@@ -1,8 +1,8 @@
 console.log("Inizio esecuzione"); //Stampa messaggio nella console
 let d = new Date(); //Crea una variabile che contiene e crea l'oggetto data
-let g = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica", ];
+let g = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
 let m = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
-console.log(d.getDate() + '/' + d.getMonth() + '/' + d.getFullYear());
+console.log(d.getDate() + '/' + (d.getMonth()+1) + '/' + d.getFullYear());
 console.log(g[d.getDay()-1] + ' ' + d.getDate() + ' ' + m[d.getMonth()] + ' ' + d.getFullYear());
 document.getElementById("data-odierna").innerHTML = "Oggi è " + g[d.getDay()-1] + ' ' + d.getDate() + ' ' + m[d.getMonth()] + ' ' + d.getFullYear(); 
 let colori = []; //Crea un array chiamato colori per salvare i valori R G B
